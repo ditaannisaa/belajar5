@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/blog.css">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    </head>
+    <body>
+                <nav>
+                    <div class="nav-left">
+                  <ul>
+                      <li>
+                          <img src="logo.png" alt="logo"/>
+                      </li>
+                      <li class="item-collapse">
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li class="item-collapse">
+                          <a href="blog.html" class="active">My Project</a>
+                      </li>
+                  </ul>
+                    </div> 
+                    <div class="nav-right item-collapse">
+                      <a href="contact.html">Contact Me</a>
+                    </div> 
+                    <div class="nav-right" id="barsmenu">
+                      <button style="background-color: transparent; border: none; cursor: pointer;" onclick="openHamburger()">
+                          <i class="fa-2x fa-solid fa-bars"></i>
+                      </button>
+                    </div>
+                  </nav>
+      
+                  <div class="hamburger-nav-container" id="hamburger-nav-container">
+                      <a href="index.html">Home</a>
+                      <a href="blog.html" class="hamburger-active">My Project</a>
+                      <a href="contact.html">Contact Me</a>
+                  </div>
+
+
+        <div class="blog-detail">
+            <h1>Dumbways Web App</h1>
+            <div class="first-blog-detail">
+                <div class="details-img">
+                    <img src="neom-hgf0fJGJPQs-unsplash.jpg" alt="image">
+                </div>
+                <div class="details-info">
+                    <div class="duration">
+                        <h4>Duration</h4>
+                        <div class="info-duration" style="gap: 20px; display: flex;">
+                            <i class="fa brands fa-calculator"></i>
+                            12 Jan 2021 - 11 Feb 2021          
+                        </div>
+                        <div class="info-duration" style="gap: 20px; display: flex;">
+                            <i class="fa fa-clock" ></i>
+                            1 month
+                        </div>
+                    </div>
+                    <h4>Technologies</h4>
+                    <div class="technology">
+                        <div class="technology-left">
+                            <div class="info-tech" style="gap: 20px; display: flex;">
+                                <i class="fa-brands fa-react"></i>
+                                <label>React Js</label>
+                            </div>
+                            <div class="info-tech" style="gap: 20px; display: flex;">
+                                <i class="fa-brands fa-node-js"></i>
+                                <label>Node Js</label>
+                            </div>
+                        </div>
+                        <div class="technology-right">
+                            <div class="info-tech" style="gap: 20px; display: flex;">
+                                <img src="next-js.svg" alt="" style=" height: 15px; width: 15px;">
+                                <label>Next Js</label>
+                            </div>
+                            <div class="info-tech"style="gap: 20px; display: flex;">
+                                <img src="icons8-typescript.svg" alt="" style=" height: 15px; width: 15px;">
+                                <label>Typescript</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: justify;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at malesuada massa. 
+                    In non nulla quis velit consectetur sagittis ut vel sem. Praesent dictum finibus quam a cursus. 
+                    Curabitur sed mauris tortor. Morbi aliquet quam justo, ac iaculis tortor fermentum quis. 
+                    Fusce suscipit lectus ut interdum euismod. Cras lacinia bibendum lorem vel pretium. 
+                    Suspendisse sollicitudin neque lorem, et dictum augue varius non. Aliquam lobortis in leo ut efficitur. 
+                    Cras facilisis mollis nunc, cursus egestas arcu luctus volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                    Nullam urna enim, lacinia in urna quis, lacinia consequat mi.
+                    <br/>
+                    Cras blandit erat sed tincidunt bibendum. Aliquam elementum mauris eu elementum rutrum. 
+                    Nulla porttitor, sem et viverra consequat, ipsum lacus ullamcorper sem, non semper metus lacus eget nibh. 
+                    Sed sit amet nibh tortor. Nulla holalalla convallis augue ac viverra ultricies. Maecenas ac fringilla mi. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    <br/>
+                    Suspendisse efficitur id felis at finibus. Cras aliquet ultrices justo, vitae dapibus odio feugiat at. 
+                    Donec at tellus facilisis, dignissim enim sit amet, porttitor augue. Etiam vitae urna vitae ligula lacinia tincidunt. 
+                    Donec pellentesque, elit vitae varius fermentum, nisl ante pharetra justo, id aliquet risus velit a lacus. Nulla eu maximus enim. 
+                    Praesent tellus felis, elementum ut neque ac, convallis dignissim urna. Donec molestie neque in posuere venenatis. 
+                    Aenean eros risus, tristique vitae volutpat auctor, laoreet eget augue. Sed ultricies iaculis eros nec scelerisque. 
+                    Suspendisse et tristique dolor. Nullam non ornare est. Curabitur molestie risus ipsum, sit amet pulvinar purus tempus ac. 
+                    Maecenas interdum lacus at ultrices porta. Donec sodales purus nec orci vehicula, laoreet semper massa vehicula.</p>
+            </div>
+        </div>
+        <script src="js/blog.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    </head>
+    <body>
+                <nav>
+                    <div class="nav-left">
+                  <ul>
+                      <li>
+                          <img src="image/logo.png" alt="logo"/>
+                      </li>
+                      <li class="item-collapse">
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li class="item-collapse">
+                          <a href="blog.html" >My Project</a>
+                      </li>
+                      <li class="item-collapse">
+                        <a href="testimonial.html" >Testimonials</a>
+                      </li>
+                  </ul>
+                    </div> 
+                    <div class="nav-right item-collapse">
+                      <a href="contact.html" class="active" >Contact Me</a>
+                    </div> 
+                    <div class="nav-right" id="barsmenu">
+                      <button style="background-color: transparent; border: none; cursor: pointer;" onclick="openHamburger()">
+                          <i class="fa-2x fa-solid fa-bars"></i>
+                      </button>
+                    </div>
+                </nav>
+      
+                  <div class="hamburger-nav-container" id="hamburger-nav-container">
+                      <a href="index.html">Home</a>
+                      <a href="blog.html" >My Project</a>
+                      <a href="testimonial.html">Testimonials</a>
+                      <a href="contact.html" class="hamburger-active">Contact Me</a>
+                  </div>
+                
+        <form>
+            <div style="width: 350px; margin: 20px auto; text-align: center; font-weight: 1000; ">
+            GET IN TOUCH
+            </div>
+
+            <div>
+                <label for="input-Name">Name</label>
+                <input type="text" id="input-Name" required/>
+            </div>
+
+            <div>
+                <label for="input-email">Email</label>
+                <input type="email" id="input-email"/>
+            </div>
+
+            <div>
+                <Label for="input-Phone-Number">Phone Number</Label>
+                <input type="text" id="input-Phone-Number"/>
+            </div>
+
+            <div>
+                <Label for="input-subject">Subject</Label>
+                <select id="input-subject">
+                    
+                    <option value="" hidden>Select</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="input-message">Your Message</label>
+                <textarea rows="5" cols="10" id="input-message"></textarea>
+            </div>
+
+            <div>
+                <button type="button" onclick="submitData()">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <script src="js/blog.js"></script>
+        <script src="js/contact.js"></script>
+    </body>
+</html>
