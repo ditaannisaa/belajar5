@@ -38,29 +38,31 @@
     </nav>
 
     <div class="container my-5 text-bg-secondary p-3" style="width: 500px;">
-        <h4 class="text-center">Submit Project</h4>
-        <form method="post" action="add-project">
+        <h4 class="text-center">Edit Project</h4>
+        <form method="post" action="{{home.id}}">
           <div class="mb-3">
             <label for="input-project-name" class="form-label">Project Name</label>
-            <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp"
+            value="{{home.title}}">
           </div>
 
           <div class="mb-3">
             <div class="start-end-date d-flex">
                 <div class="startdate col">
                     <label for="input-start-date">Start Date</label>
-                    <input type="date" class="form-control" name="startdate" id="input-start-date"/>
+                    <input type="date" class="form-control" name="startdate" id="input-start-date" value="{{home.startdate}}"/>
                 </div>
                 <div class="enddate col ms-3">
                     <label for="input-end-date">End Date</label>
-                    <input type="date" class="form-control" name="enddate" id="input-end-date"/>
+                    <input type="date" class="form-control" name="enddate" id="input-end-date" value="{{home.enddate}}"/>
                 </div>
             </div>
           </div>
 
           <div class="mb-3">
             <label for="input-description" class="form-label">Description</label>
-            <textarea class="form-control" name="content" id="content" style="height: 200px; resize: none"></textarea>
+            <textarea class="form-control" name="content" id="content" style="height: 200px; resize: none"
+            >{{home.content}}</textarea>
           </div>
   
           <div class="mb-3">
@@ -68,26 +70,50 @@
                             <div class="input-checkbox d-flex">
                                 <div class="checkbox-left col">
                                     <div class="checkbox">
+                                        {{#if home.nodejs}}
+                                        <input type="checkbox" name="nodejs" id="node-js" checked/>
+                                        <img src="/image/icons8-nodejs.svg" alt="" style="width: 25px;">
+                                        <label for="node-js">Node Js</label>
+                                        {{else}}
                                         <input type="checkbox" name="nodejs" id="node-js" />
                                         <img src="/image/icons8-nodejs.svg" alt="" style="width: 25px;">
                                         <label for="node-js">Node Js</label>
+                                        {{/if}}
                                     </div>
                                     <div class="checkbox">
+                                        {{#if home.nextjs}}
+                                        <input type="checkbox" name="nextjs" id="next-js" checked  />
+                                        <img src="/image/next-js.svg" alt="" style="width: 25px;">
+                                        <label for="next-js">Next Js</label>
+                                        {{else}}
                                         <input type="checkbox" name="nextjs" id="next-js" />
                                         <img src="/image/next-js.svg" alt="" style="width: 25px;">
                                         <label for="next-js">Next Js</label>
+                                        {{/if}}
                                     </div>
                                 </div>
                                 <div class="checkbox-right col">
                                     <div class="checkbox">
+                                        {{#if home.reactjs}}
+                                        <input type="checkbox" name="reactjs" id="react-js" checked />
+                                        <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;" >
+                                        <label for="react-js">React JS</label>
+                                        {{else}}
                                         <input type="checkbox" name="reactjs" id="react-js" />
                                         <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;">
                                         <label for="react-js">React JS</label>
+                                        {{/if}}
                                     </div>
                                     <div class="checkbox">
-                                        <input type="checkbox" name="typescript" id="typescript"/>
+                                        {{#if home.typescript}}
+                                        <input type="checkbox" name="typescript" id="typescript" checked/>
                                         <img src="/image/icons8-typescript.svg" alt="" style="width: 25px;">
                                         <label for="typescript">Typescript</label>
+                                        {{else}}
+                                        <input type="checkbox" name="typescript" id="typescript" />
+                                        <img src="/image/icons8-typescript.svg" alt="" style="width: 25px;">
+                                        <label for="typescript">Typescript</label>
+                                        {{/if}}
                                     </div>
                                 </div>
                             </div>

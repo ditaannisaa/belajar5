@@ -79,93 +79,44 @@
     <div class="container mb-5">
         <h1 class="fw-bold text-center mb-3">MY PROJECT</h1>
         <div class="row row-cols-1 row-cols-md-3 g-4">
+          {{#each dataBlog}}
             <div class="col">
               <div class="card h-100">
                 <img src="/image/annie-spratt-FSFfEQkd1sc-unsplash.jpg" class="card-img-top" alt="..."
                 style="height:200px; object-fit:cover">
                 <div class="card-body">
-                  <a href="/blog-details/12" class="text-secondary-emphasis">
-                  <h5 class="card-title">Dumbways - 2023</h5>
+                  <a href="/blog-details/{{@index}}" class="text-secondary-emphasis">
+                  <h5 class="card-title" >{{this.title}}</h5>
                   </a>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nisi distinctio, perspiciatis necessitatibus culpa iusto! Accusamus tenetur sunt.</p>
+                  <p class="card-text">durasi : {{this.dateDuration}}</p>
+                  <p class="card-text">{{this.content}}</p>
+                  {{#if this.nodejs}}
                   <img src="/image/icons8-nodejs.svg" alt="" style="width: 25px;">
-                  <img src="/image/next-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-typescript.svg" alt="" style="width: 25px;">
+                  {{/if}}
+                  {{#if this.nextjs}}
+                  <img src="/image/next-js.svg" alt="" style="width: 25px;" >
+                  {{/if}}
+                  {{#if this.reactjs}}
+                  <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;" >
+                  {{/if}}
+                  {{#if this.typescript}}
+                  <img src="/image/icons8-typescript.svg" alt="" style="width: 25px;" >
+                  {{/if}}
                 </div>
                 <div class="container gap-2 d-md-block mb-2">
-                    <button class="btn btn-primary btn-danger" type="button">Edit</button>
-                    <button class="btn btn-primary btn-danger" type="button">Delete</button>
+                    <button class="btn btn-primary btn-danger" type="button">
+                      <a href="/edit-blog/{{@index}}" class="text-light">Edit</a>
+                      </button>
+                    <button class="btn btn-primary btn-danger" type="button">
+                      <a href="/delete-blog/{{@index}}" class="text-light">Delete</a>
+                    </button>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="/image/lycs-architecture-U2BI3GMnSSE-unsplash.jpg" class="card-img-top" alt="blogimg"
-                style="height:200px; object-fit:cover">
-                <div class="card-body">
-                  <a href="/blog-details/12" class="text-secondary-emphasis">
-                  <h5 class="card-title">Dumbways - 2023</h5>
-                  </a>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nisi distinctio, perspiciatis necessitatibus culpa iusto! Accusamus tenetur sunt.</p>
-                  <img src="/image/icons8-nodejs.svg" alt="" style="width: 25px;">
-                  <img src="/image/next-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-typescript.svg" alt="" style="width: 25px;">
-                </div>
-                <div>
-                  <div class="container gap-2 d-md-block mb-2">
-                    <button class="btn btn-primary btn-danger" type="button">Edit</button>
-                    <button class="btn btn-primary btn-danger" type="button">Delete</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="/image/israel-andrade-YI_9SivVt_s-unsplash.jpg" class="card-img-top" alt="blogimg"
-                style="height:200px; object-fit:cover">
-                <div class="card-body">
-                  <a href="/blog-details/12" class="text-secondary-emphasis">
-                  <h5 class="card-title">Dumbways - 2023</h5>
-                  </a>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nisi distinctio, perspiciatis necessitatibus culpa iusto! Accusamus tenetur sunt.</p>
-                  <img src="/image/icons8-nodejs.svg" alt="" style="width: 25px;">
-                  <img src="/image/next-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-typescript.svg" alt="" style="width: 25px;">
-                </div>
-                <div>
-                <div class="container gap-2 d-md-block mb-2">
-                    <button class="btn btn-primary btn-danger" type="button">Edit</button>
-                    <button class="btn btn-primary btn-danger" type="button">Delete</button>
-                </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="/image/lycs-architecture-U2BI3GMnSSE-unsplash.jpg" class="card-img-top" alt="blogimg"
-                style="height:200px; object-fit:cover">
-                <div class="card-body">
-                  <a href="/blog-details/12" class="text-secondary-emphasis">
-                  <h5 class="card-title">Dumbways - 2023</h5>
-                  </a>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nisi distinctio, perspiciatis necessitatibus culpa iusto! Accusamus tenetur sunt.</p>
-                  <img src="/image/icons8-nodejs.svg" alt="" style="width: 25px;">
-                  <img src="/image/next-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;">
-                  <img src="/image/icons8-typescript.svg" alt="" style="width: 25px;">
-                </div>
-                <div>
-                <div class="container gap-2 d-md-block mb-2">
-                    <button class="btn btn-primary btn-danger" type="button">Edit</button>
-                    <button class="btn btn-primary btn-danger" type="button">Delete</button>
-                </div>  
-                </div>
-              </div>
-            </div>
-          </div>
+
+        {{/each}}
+        </div>
+        
     </div>
 </body>
 </html>

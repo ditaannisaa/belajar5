@@ -36,9 +36,10 @@
               </div>
             </div>
         </nav>
+        
         <div class="container">
           <section class="mt-5">
-            <h2 class="text-center">{{data.title}}</h2>
+            <h2 class="text-center">{{home.title}}</h2>
     
             <div class="mt-5 row">
               <div class="col">
@@ -49,10 +50,10 @@
                   <p class="fw-bold">Duration</p>
                   <div class="d-flex flex-column row-gap-2">
                     <p>
-                      <i class="fa-solid fa-calendar-days fa-2xl"></i>12 Jan 2021 -
-                      11 Feb 2021
+                      <i class="fa-solid fa-calendar-days fa-2xl"></i>{{home.startdate}} -
+                      {{home.enddate}}
                     </p>
-                    <p><i class="fa-solid fa-earth-oceania fa-2xl"></i> 1 Month</p>
+                    <p><i class="fa-solid fa-earth-oceania fa-2xl"></i>{{home.dateDuration}}</p>
                   </div>
                 </div>
     
@@ -60,16 +61,24 @@
                   <p class="fw-bold">Technologies</p>
                   <div class="row-gap-5">
                     <div class="col">
-                      <img src="assets/image/icons8-nodejs.svg" alt="" style="width: 25px;">
+                      {{#if home.nodejs}}
+                      <img src="/image/icons8-nodejs.svg" alt="" style="width: 25px;">
                       <label for="node-js">Node Js</label>
-                      <img src="assets/image/next-js.svg" alt="" style="width: 25px;">
+                      {{/if}}
+                      {{#if home.nextjs}}
+                      <img src="/image/next-js.svg" alt="" style="width: 25px; margin-left: 20px;">
                       <label for="next-js">Next Js</label>
+                      {{/if}}
                     </div>
-                    <div class="col">
-                      <img src="assets/image/icons8-react-js.svg" alt="" style="width: 25px;">
+                    <div class="col gap-5">
+                      {{#if home.reactjs}}
+                      <img src="/image/icons8-react-js.svg" alt="" style="width: 25px;">
                       <label for="react-js">React JS</label>
-                      <img src="assets/image/icons8-typescript.svg" alt="" style="width: 25px;">
+                      {{/if}}
+                      {{#if home.typescript}}
+                      <img src="/image/icons8-typescript.svg" alt="" style="width: 25px; margin-left: 20px;">
                       <label for="typescript">Typescript</label>
+                      {{/if}}
                     </div>
                   </div>
                 </div>
@@ -77,14 +86,9 @@
             </div>
             
           </section>
-            <div class="container">
+            <div class="mt-3">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Eveniet velit ab repudiandae deserunt quo eaque corporis laborum labore maxime ipsa. 
-                Quis expedita autem dolor voluptatibus, ex labore illo doloremque harum! Repudiandae, 
-                harum possimus ut reprehenderit culpa pariatur repellat, beatae amet deserunt cum consequatur 
-                est incidunt accusantium dolor necessitatibus at. Ut placeat expedita corrupti quam enim quasi 
-                iusto cupiditate. Molestias, nihil?
+              {{home.content}}
             </p>
             </div>
 </body>
